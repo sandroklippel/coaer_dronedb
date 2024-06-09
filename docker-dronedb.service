@@ -1,0 +1,16 @@
+[Unit]
+Description=Docker Compose DroneDB Service
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+WorkingDirectory=/opt/dronedb
+ExecStart=/usr/local/bin/docker-compose up -d
+ExecStop=/usr/local/bin/docker-compose down
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=docker-compose-dronedb
+
+[Install]
+WantedBy=multi-user.target
