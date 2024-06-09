@@ -16,8 +16,8 @@ else
     echo ".env file does not exist, using default config"
 fi
 
-rm appsettings.json
-rm initialize.sql
+rm -rf appsettings.json
+rm -rf initialize.sql
 
 envsubst < appsettings-template.json > appsettings.json
 envsubst < initialize-template.sql > initialize.sql
