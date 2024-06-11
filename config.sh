@@ -18,4 +18,4 @@ fi
 rm -rf appsettings.json
 
 envsubst < appsettings-template.json > "$DATA_DIR/appsettings.json"
-envsubst < docker-dronedb-template.service /etc/systemd/system/docker-dronedb.service
+envsubst < docker-dronedb-template.service > /etc/systemd/system/docker-dronedb.service
