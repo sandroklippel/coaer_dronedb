@@ -5,7 +5,7 @@ services:
         image: mariadb:10.6
         volumes:
             - data-mysql:/var/lib/mysql
-            - ./initialize.sql:/docker-entrypoint-initdb.d/initialize.sql:z
+            - ./initialize.sql:/docker-entrypoint-initdb.d/initialize.sql
         restart: unless-stopped
         environment:
             - MYSQL_ROOT_PASSWORD
@@ -32,7 +32,6 @@ services:
             - /tmp
         volumes:
             - ${DATA_DIR}:/data:z
-            - ./appsettings.json:/data/appsettings.json:z
         ports:
             - "80:5000"
         restart: unless-stopped
