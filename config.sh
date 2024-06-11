@@ -20,5 +20,5 @@ fi
 rm -rf appsettings.json
 rm -rf initialize.sql
 
-envsubst < appsettings-template.json > "$DATA_DIR/appsettings.json"
+envsubst < appsettings-template.json > appsettings.json
 envsubst < initialize-template.sql > initialize.sql

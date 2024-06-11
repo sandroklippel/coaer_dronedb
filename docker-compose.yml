@@ -1,4 +1,4 @@
-version: '3'
+version: "3.3"
 
 services:
     db:
@@ -27,7 +27,7 @@ services:
     registry:
         depends_on:
             - db
-        image: dronedb/registry
+        image: dronedb/registry:1.0.17
         tmpfs:
             - /tmp
         volumes:
